@@ -1,7 +1,5 @@
 <template>
-  <v-container class="fill-height">
-    <v-row  class="justify-center" >
-      <v-col cols="4">
+  <div>
         <v-date-picker
           v-model="picker"
           class="justify-center"
@@ -10,9 +8,7 @@
           locale="pt"
 
         />
-      </v-col>
-    </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>

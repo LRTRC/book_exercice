@@ -14,11 +14,12 @@
     </v-row>
 
     <v-row>
-      <v-col cols="9">
+      <v-col cols="6">
         <sparklines/>
       </v-col>
-      <v-col cols="3">
+      <v-col cols="6">
         <calendly/>
+        <Button/>
       </v-col>
     </v-row>
 

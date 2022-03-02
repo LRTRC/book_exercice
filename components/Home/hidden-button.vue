@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div>
     <v-row class="mt-10">
       <v-col cols="4">
         <v-card color="red" height="200" v-show="!hidden" />
@@ -22,7 +22,7 @@
         {{ hiddengreen ? 'Show GREEN BRICKS' : 'Hide GREEN BRICKS' }}
       </v-btn>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>

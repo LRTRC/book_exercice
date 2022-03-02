@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-row class="justify-end mt-12">
-      <v-col cols="4">
+    <v-row>
+      <v-col cols="8">
         <v-card>
           <v-sparkline
             :value="value"
@@ -23,8 +23,8 @@
         </v-card-text>
       </v-col>
     </v-row>
-    <v-row class="justify-end mt-12">
-      <v-col cols="4">
+    <v-row >
+      <v-col cols="8">
         <v-card>
           <v-sparkline
             :value="value2"
@@ -45,8 +45,8 @@
         </v-card-text>
       </v-col>
     </v-row>
-    <v-row class="justify-end mt-12">
-      <v-col cols="4">
+    <v-row >
+      <v-col cols="8">
         <v-card>
           <v-sparkline
             :value="value3"
