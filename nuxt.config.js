@@ -38,12 +38,16 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['nuxt-highlightjs', {
+      style: 'sunburst'
+    }]
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
+      dark: true,
       themes: {
         light: {
           primary: colors.blue.darken2,
