@@ -1,7 +1,7 @@
 <template>
-  <v-app dark>
+  <v-app >
     <v-navigation-drawer
-      :mini-variant="miniVariant"
+      v-model="drawer"
       fixed
       app
     >
@@ -28,15 +28,15 @@
     >
       <v-btn
         icon
-        @click.stop="miniVariant = !miniVariant"
+        @click.stop="drawer = !drawer"
       >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+        <v-icon>mdi-{{ `chevron-${drawer ? 'right' : 'left'}` }}</v-icon>
       </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container fluid>
         <Nuxt />
       </v-container>
     </v-main>
@@ -48,28 +48,50 @@
     </v-footer>
   </v-app>
 </template>
-
 <script>
 export default {
   name: 'DefaultLayout',
   data () {
     return {
-
+      drawer: false,
+      title: 'Vuetify.js',
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
+          icon: 'mdi-home',
+          title: 'Home',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-language-javascript',
+          title: 'JS Exercices',
+          to: '/exercices-part1'
+        },
+        {
+          icon: 'mdi-vote',
+          title: 'Voting form',
+          to: '/vote-form'
+        },
+        {
+          icon: 'mdi-coffee',
+          title: 'Cafe with vue',
+          to: '/cafe-with-a-vue'
         }
       ],
-      miniVariant: false,
-      title: 'Vuetify.js'
     }
   }
 }
 </script>
+
+<style>
+{
+  /*primary: #673ab7;*/
+  /*secondary: #ffc107;*/
+  /*accent: #9c27b0;*/
+  /*error: #f44336;*/
+  /*warning: #ff5722;*/
+  /*info: #cddc39;*/
+  /*success: #4caf50;*/
+}
+
+
+</style>
