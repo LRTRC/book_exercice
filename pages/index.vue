@@ -25,6 +25,10 @@
 
     <hidden-button/>
 
+    <keep-alive>
+      <component v-bind:is="component" v-on:changeComponent="updateComponent($event)"></component>
+    </keep-alive>
+
   </div>
 </template>
 
@@ -37,11 +41,15 @@ import HiddenButton from "../components/Home/hidden-button";
 import DialBrick from "../components/Home/dial-brick";
 import ColoredBricks from "../components/Home/colored-bricks";
 import Calendly from "../components/Home/calendly";
+import SliderPro from "../components/Home/slider-pro";
+import BarGaming from "../components/Home/bar-gaming";
+
 
 
 export default {
   name: 'IndexPage',
   components: {
+    SliderPro,
     Calendly,
     ColoredBricks,
     DialBrick,
@@ -50,6 +58,15 @@ export default {
     ResponsiveBricks,
     RightList,
     Sparklines,
+    BarGaming
+  },
+  data: () => ({
+    component: 'SliderPro',
+  }),
+  methods: {
+    updateComponent: function (updatedComponent) {
+      return this.component = updatedComponent
+    }
   }
 }
 </script>
