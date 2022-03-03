@@ -1,6 +1,10 @@
 <template>
   <div class="menu-item">
+    <v-row>
+      <v-col cols="12" md="6">
     <v-img class="menu-item-image" :src="image.source" :alt="image.alt" />
+      </v-col>
+      <v-col cols="12" md="6">
     <div>
       <div>{{ name }}</div>
       <div>
@@ -16,7 +20,8 @@
           id="add-item-quantity"
           type="number"
          :label="`Quantité: ${quantity}`"
-          color="warning"
+          color="info"
+
 
         />
         <BaseButton @click="updateShoppingCart(quantity)">
@@ -24,6 +29,8 @@
         </BaseButton>
       </div>
     </div>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -90,15 +97,14 @@ export default {
 <style>
 .menu-item {
   display: flex;
-  width: 500px;
-  justify-content: space-between;
   margin-bottom: 30px;
-  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
 
 }
 .menu-item-image {
     max-width: 175px;
-    margin-inline: auto;
+    margin-inline: 1.5em;
   border-radius: 1.5em;
   }
 

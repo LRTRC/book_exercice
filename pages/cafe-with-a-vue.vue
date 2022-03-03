@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <div class="d-flex flex-column mt-10">
       <v-card-text
         class="titre d-flex justify-center mb-6"
@@ -19,9 +19,9 @@
       </v-card-text>
     </div>
     <v-row justify="center">
-      <v-col cols="6">
+      <v-col cols="12" sm="7">
         <v-card
-          class="menu d-flex flex-column ma-10"
+          class="menu d-flex flex-column ma-10 py-5"
           rounded="xl"
 
         >
@@ -165,6 +165,7 @@ export default {
   margin: 1.5em;
   font-size: 0.9em;
 }
+
 .listeContact {
   text-align: center;
 }
@@ -201,10 +202,12 @@ export default {
   font-weight: bold;
   font-size: 1.2em;
 }
+
 .titre {
   font-size: 5em;
   font-family: 'Italiana';
 }
+
 .body {
   font-family: 'Italiana';
   font-size: 1.2em;

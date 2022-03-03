@@ -101,10 +101,5 @@ export default {
 }
 </script>
 <style>
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: start;
-}
+
 </style>
