@@ -1,34 +1,65 @@
 <template>
   <div>
-    <responsive-bricks/>
-
-    <dial-brick/>
-
-    <v-row>
-      <v-col cols="9">
-        <colored-bricks/>
-      </v-col>
-      <v-col cols="3">
-        <right-list/>
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col cols="6">
-        <sparklines/>
-      </v-col>
-      <v-col cols="6">
-        <calendly/>
-        <Button/>
-      </v-col>
-    </v-row>
-
-    <hidden-button/>
-
     <keep-alive>
       <component v-bind:is="component" v-on:changeComponent="updateComponent($event)"></component>
     </keep-alive>
 
+    <div
+    v-if="component === 'SliderPro'"
+    >
+      <v-card
+        class="pa-5 ma-3"
+        color="#2A3942"
+        shaped
+      >
+        <responsive-bricks/>
+      </v-card>
+      <v-row justify="space-between" align="center">
+
+        <v-col cols="12" md="4">
+          <v-card
+            class="pa-5 ma-3"
+            color="#2A3942"
+            shaped
+          >
+            <hidden-button class="pa-5"/>
+            <dial-brick class="pa-5"/>
+          </v-card>
+        </v-col>
+        <v-col md="8" cols="12">
+          <v-card
+            class="pa-5 ma-3"
+            color="#2A3942"
+            shaped
+          >
+            <colored-bricks/>
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row justify="space-between" align="center">
+        <v-col cols="12" md="8">
+          <v-card
+            class="pa-5 ma-3"
+            color="#2A3942"
+            shaped
+          >
+            <sparklines/>
+          </v-card>
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-card
+            class="pa-5 ma-3 "
+            color="#2A3942"
+            shaped
+          >
+
+            <right-list class="ma-5"/>
+            <Button class="ma-5 "/>
+            <calendly class="my-5"/>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
   </div>
 </template>
 
@@ -41,9 +72,8 @@ import HiddenButton from "../components/Home/hidden-button";
 import DialBrick from "../components/Home/dial-brick";
 import ColoredBricks from "../components/Home/colored-bricks";
 import Calendly from "../components/Home/calendly";
-import SliderPro from "../components/Home/slider-pro";
 import BarGaming from "../components/Home/bar-gaming";
-
+import SliderPro from "../components/Home/slider-pro";
 
 
 export default {
@@ -70,3 +100,11 @@ export default {
   }
 }
 </script>
+<style>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: start;
+}
+</style>

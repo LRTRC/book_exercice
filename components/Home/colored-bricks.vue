@@ -5,17 +5,17 @@
 
     <v-row justify="center" class="mb-3">
       <v-col cols="4">
-        <v-card height="250" color="blue">
+        <v-card min-height="200" color="blue">
         </v-card>
       </v-col>
 
       <v-col cols="4">
-        <v-card color="red" height="250">
+        <v-card color="red" height="200">
         </v-card>
       </v-col>
 
       <v-col cols="4">
-        <v-card color="purple" height="250" >
+        <v-card color="purple" height="200" >
         </v-card>
       </v-col>
     </v-row>

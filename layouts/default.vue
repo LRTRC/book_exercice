@@ -83,15 +83,6 @@ export default {
 </script>
 
 <style>
-{
-  /*primary: #673ab7;*/
-  /*secondary: #ffc107;*/
-  /*accent: #9c27b0;*/
-  /*error: #f44336;*/
-  /*warning: #ff5722;*/
-  /*info: #cddc39;*/
-  /*success: #4caf50;*/
-}
 
 
 </style>

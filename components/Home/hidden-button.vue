@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-row class="mt-10">
-      <v-col cols="4">
-        <v-card color="red" height="200" v-show="!hidden" />
+    <v-row >
+      <v-col cols="4" md="12">
+        <v-card color="red" height="65" v-show="!hidden" />
       </v-col>
-      <v-col cols="4">
-        <v-card color="green" height="200" v-show="!hiddengreen"/>
-      </v-col><v-col cols="4">
-      <v-card color="red" height="200" v-show="!hidden"/>
+      <v-col cols="4" md="12">
+        <v-card color="green" height="65" v-show="!hiddengreen"/>
+      </v-col><v-col cols="4" md="12">
+      <v-card color="red" height="65" v-show="!hidden"/>
     </v-col>
     </v-row>
     <v-row justify="center" class="mt-12">

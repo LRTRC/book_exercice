@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-fill fill-height">
+  <v-container fluid class="fill-height justify-center" >
     <v-row justify="center" class="text-h3 justify-center my-16">
       Let's get ready to rumble
     </v-row>
@@ -83,7 +83,7 @@
         QUIT
       </v-btn>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script>

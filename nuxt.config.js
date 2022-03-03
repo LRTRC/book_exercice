@@ -15,8 +15,10 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { href: "https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap", rel:"stylesheet" },
+      { href: "https://fonts.googleapis.com/css2?family=Italiana&display=swap", rel:"stylesheet" },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -40,16 +42,28 @@ export default {
   modules: [
     ['nuxt-highlightjs', {
       style: 'sunburst'
-    }]
+    }], 'nuxt-webfontloader'
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    treeShaking: true,
+    optionsPath: './vuetify.options.js',
+    // defaultAssets: {
+    //   font: {
+    //     family: 'Space Grotesk',
+    //   }
+    // },
+    // webfontloader: {
+    //   google: {
+    //     families: ['Space+Grotesk:300,400,600'],
+    //   }
+    // },
     theme: {
       dark: true,
       themes: {
-        light: {
+        dark: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,

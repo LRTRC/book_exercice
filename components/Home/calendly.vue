@@ -2,10 +2,9 @@
   <div>
         <v-date-picker
           v-model="picker"
-          class="justify-center"
           header-color="green"
           color="green"
-          locale="pt"
+          locale="fr"
 
         />
   </div>

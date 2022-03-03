@@ -1,8 +1,9 @@
 <template>
   <div>
-    <v-row>
-      <v-col cols="8">
-        <v-card>
+      <div class="my-2">
+        <v-card
+        elevation="10"
+        >
           <v-sparkline
             :value="value"
             :labels="labels"
@@ -18,14 +19,18 @@
             auto-draw
           ></v-sparkline>
         </v-card>
-        <v-card-text class="text-h5 font-italic grey white--text">
+        <v-card-text
+          class="text-h5 font-italic grey white--text"
+          elevation="10"
+        >
+
           Sparkline 1
         </v-card-text>
-      </v-col>
-    </v-row>
-    <v-row >
-      <v-col cols="8">
-        <v-card>
+      </div>
+      <div class="my-2">
+        <v-card
+          elevation="10"
+        >
           <v-sparkline
             :value="value2"
             :gradient="gradients2"
@@ -40,14 +45,16 @@
             auto-draw
           ></v-sparkline>
         </v-card>
-        <v-card-text class="text-h5 font-italic font-weight-medium blue white--text">
+        <v-card-text
+          elevation="10"
+          class="text-h5 font-italic font-weight-medium blue white--text">
           Sparkline 2
         </v-card-text>
-      </v-col>
-    </v-row>
-    <v-row >
-      <v-col cols="8">
-        <v-card>
+      </div>
+      <div class="my-2">
+        <v-card
+          elevation="10"
+        >
           <v-sparkline
             :value="value3"
             :gradient="gradient3"
@@ -62,11 +69,12 @@
             auto-draw
           ></v-sparkline>
         </v-card>
-        <v-card-text class="text-h5 font-italic font-weight-bold red white--text">
+        <v-card-text
+          elevation="10"
+          class="text-h5 font-italic font-weight-bold red white--text">
           Sparkline 3
         </v-card-text>
-      </v-col>
-    </v-row>
+      </div>
   </div>
 </template>
 

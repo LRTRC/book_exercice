@@ -7,11 +7,18 @@
         Prix : {{ generatedPrice }}
         <span v-if="onSale">(10% de réduction !)</span>
       </div>
-      <div v-if="inStock" class="body">En stock</div>
+      <div v-if="inStock" >En stock</div>
       <div v-else>En rupture de stock</div>
       <div>
-        <label for="add-item-quantity">Quantité : {{ quantity }}</label>
-        <input v-model.number="quantity" id="add-item-quantity" type="number" />
+
+        <v-text-field
+          v-model.number="quantity"
+          id="add-item-quantity"
+          type="number"
+         :label="`Quantité: ${quantity}`"
+          color="warning"
+
+        />
         <BaseButton @click="updateShoppingCart(quantity)">
           Ajouter au panier
         </BaseButton>
@@ -86,9 +93,13 @@ export default {
   width: 500px;
   justify-content: space-between;
   margin-bottom: 30px;
+  margin-inline: auto;
+
 }
 .menu-item-image {
-    max-width: 300px;
+    max-width: 175px;
+    margin-inline: auto;
+  border-radius: 1.5em;
   }
 
 </style>

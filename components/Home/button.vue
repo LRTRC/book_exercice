@@ -1,13 +1,13 @@
 <template>
-  <div bg fill-height>
-    <v-row justify="center">
+  <div>
       <v-btn
         elevation="2"
         color="secondary"
-        rounded>
+        rounded
+        block
+      >
         Cliquez-ici
       </v-btn>
-    </v-row>
   </div>
 </template>
 
