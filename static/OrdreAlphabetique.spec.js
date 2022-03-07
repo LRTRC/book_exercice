@@ -8,11 +8,9 @@ describe('HPGB', () => {
     /** Trier par ordre alphabétique la table avec la fonction sort()
      */
 
-    let l = ['H', 'P', 'G', 'B']
+    const l = ['H', 'P', 'G', 'B']
     // let s = l.sort();
-    const F = (l) => {
-      return l.sort();
-    }
+    const F = (l) => l.sort()
     expect(F(l)).toStrictEqual(['B', 'G', 'H', 'P'])
   })
 
@@ -21,7 +19,7 @@ describe('HPGB', () => {
     /** Contrôler la longueur de la table avec .length
      */
 
-    let l = ['H', 'P', 'G', 'B']
+    const l = ['H', 'P', 'G', 'B']
     expect(l.length).toStrictEqual(4)
   })
 
@@ -30,7 +28,7 @@ describe('HPGB', () => {
     /** Trouver une caractère particulier dans une string
      */
 
-    let t = 'TOTO'
+    const t = 'TOTO'
     expect(t.charAt(2)).toStrictEqual('T')
   })
 
@@ -40,7 +38,7 @@ describe('HPGB', () => {
      * l'index de l'objet
      */
 
-    let myArray = [{
+    const myArray = [{
       code: '000002',
       reference: 'BA',
       goal: '70'
@@ -56,9 +54,7 @@ describe('HPGB', () => {
         goal: '70'
       },]
 
-    expect(myArray.map(function (e) {
-      return e.code;
-    }).indexOf('000001')).toStrictEqual(1)
+    expect(myArray.map((e) => e.code).indexOf('000001')).toStrictEqual(1)
   })
 
 
@@ -67,7 +63,7 @@ describe('HPGB', () => {
      * contient bien 6 chiffres
      */
 
-    let myArray = [{
+    const myArray = [{
       code: '000002',
       reference: 'BA',
       goal: '70'
@@ -83,9 +79,7 @@ describe('HPGB', () => {
         goal: '70'
       },]
 
-    expect(myArray.map(function (e) {
-      return e.code.length;
-    })).toStrictEqual([6, 6, 6])
+    expect(myArray.map((e) => e.code.length)).toStrictEqual([6, 6, 6])
 
   })
 
@@ -95,7 +89,7 @@ describe('HPGB', () => {
      * de la clé "goal: "
      */
 
-    let myArray = [{
+    const myArray = [{
       code: '008020',
       reference: 'BA',
       goal: 79
@@ -111,19 +105,17 @@ describe('HPGB', () => {
         goal: 70
       },]
 
-    expect(myArray.map(function (e) {
-      return e.goal;
-    }).sort()).toStrictEqual([70, 75, 79])
+    expect(myArray.map((e) => e.goal).sort()).toStrictEqual([70, 75, 79])
 
   })
 
 
   test('16.2 Sort code', () => {
-    /**Trier les objets de la table, grâce à la fonction sort(), par les valeurs
+    /** Trier les objets de la table, grâce à la fonction sort(), par les valeurs
      * de la clé "code:
      */
 
-    let myArray = [{
+    const myArray = [{
       code: '008020',
       reference: 'BA',
       goal: '79'
@@ -139,9 +131,7 @@ describe('HPGB', () => {
         goal: '70'
       },]
 
-    expect(myArray.map(function (e) {
-      return e.code;
-    }).sort()).toStrictEqual(['000002', '000012', '008020'])
+    expect(myArray.map((e) => e.code).sort()).toStrictEqual(['000002', '000012', '008020'])
 
   })
 

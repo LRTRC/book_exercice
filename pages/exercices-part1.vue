@@ -141,22 +141,22 @@ export default {
 
   watch: {
 
-    codes_text: function (newValue, oldValue) {
+    codes_text (newValue) {
       return newValue;
     },
-    codes_text2: function (newValue, oldValue) {
+    codes_text2 (newValue) {
       return newValue;
     },
-    codes_text3: function (newValue, oldValue) {
+    codes_text3 (newValue) {
       return newValue;
     },
-    codes_text4: function (newValue, oldValue) {
+    codes_text4 (newValue) {
       return newValue;
     },
-    codes_text5: function (newValue, oldValue) {
+    codes_text5 (newValue) {
       return newValue;
     },
-    codes_text6: function (newValue, oldValue) {
+    codes_text6 (newValue) {
       return newValue;
     },
 

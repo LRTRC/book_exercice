@@ -81,7 +81,7 @@
 </template>
 
 <script>
-let RBgradients = [
+const RBgradients = [
   ['#222'],
   ['#42b3f4'],
   ['red', 'orange', 'yellow'],

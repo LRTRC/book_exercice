@@ -12,11 +12,11 @@ describe('17 Créer une fonction que génére des nombres premiers', () => {
      */
 
     function f() {
-      let l = []
-      let stop = 1000
+      const l = []
+      const stop = 1000
       for (let i = 2; i <= stop; i++) {
-        let aux = []
-        for (let h = 1; h <= stop; h++) { //Si le reste du nombre i divisé, de 1 à 1000,
+        const aux = []
+        for (let h = 1; h <= stop; h++) { // Si le reste du nombre i divisé, de 1 à 1000,
           if ((i % h === 0) && (i / i === 1)) { // avec % modulo ne produit que 2 * 0
             aux.push(i % h) // (0 stockés provisoirement dans aux[]) alors i est ajouté
           }                 // à la liste des nombres premiers l = []
@@ -28,8 +28,8 @@ describe('17 Créer une fonction que génére des nombres premiers', () => {
       return l
     }
 
-    let base = f()
-    let s = base.slice(0, 10) // On utilise .slice pour récupérer un échantillon
+    const base = f()
+    const s = base.slice(0, 10) // On utilise .slice pour récupérer un échantillon
                               // de l'index 0 à 10
     expect(s).toStrictEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29])
   })
@@ -40,10 +40,10 @@ describe('17 Créer une fonction que génére des nombres premiers', () => {
      */
 
     function f() {
-      let l = []
-      let stop = 1000
+      const l = []
+      const stop = 1000
       for (let i = 2; i <= stop; i++) {
-        let aux = []
+        const aux = []
         for (let h = 1; h <= stop; h++) {
           if ((i % h === 0) && (i / i === 1)) {
             aux.push(i % h)
@@ -66,10 +66,10 @@ describe('17 Créer une fonction que génére des nombres premiers', () => {
      */
 
     function f() {
-      let l = []
-      let stop = 1000
+      const l = []
+      const stop = 1000
       for (let i = 2; i <= stop; i++) {
-        let aux = []
+        const aux = []
         for (let h = 1; h <= stop; h++) {
           if ((i % h === 0) && (i / i === 1)) {
             aux.push(i % h)
@@ -82,7 +82,7 @@ describe('17 Créer une fonction que génére des nombres premiers', () => {
     }
 
     console.log(f())
-    let base = f()
+    const base = f()
     expect(base[21]).toBe(79)
     expect(base[31]).toBe(131)
   })
@@ -96,7 +96,7 @@ describe('17 Créer une fonction que génére des nombres premiers', () => {
         return false;
       }
       for (let i = 2; i < number - 1; i++) {
-        if (0 === number % i) {
+        if (number % i === 0) {
           return false;
         }
       }
@@ -104,7 +104,7 @@ describe('17 Créer une fonction que génére des nombres premiers', () => {
     }
 
     let i = 1;
-    let numbers = [];
+    const numbers = [];
     do {
       if (isPrem(i)) {
         numbers.push(i)

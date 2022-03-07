@@ -69,7 +69,7 @@ export default {
         this.$emit('changeComponent', 'BarGaming')
       }
     },
-    launch: function () {
+    launch () {
       if (this.count === 1) {
         setTimeout(this.clearCount, 3000)
       }

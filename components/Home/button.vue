@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <div class="text-center">
       <v-btn
         elevation="2"
         color="secondary"
         rounded
-        block
       >
         Cliquez-ici
       </v-btn>

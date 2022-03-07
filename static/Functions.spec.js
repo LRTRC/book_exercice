@@ -10,10 +10,10 @@ describe("Parcourir un tableau composé d'objets", () => {
      * à partir d'une fonction constructor
      */
 
-    function Car(make, model, year) { //Function constructor qui permet
-      this.make = make               //de créer une classe d'objet
-      this.model = model            //ici la classe "Car", avec des arguments
-      this.year = year             //ici "make", "model" et "year"
+    function Car(make, model, year) { // Function constructor qui permet
+      this.make = make               // de créer une classe d'objet
+      this.model = model            // ici la classe "Car", avec des arguments
+      this.year = year             // ici "make", "model" et "year"
     }
 
     const car1 = new Car('Renault', 'Twingo', 1999)
@@ -30,7 +30,7 @@ describe("Parcourir un tableau composé d'objets", () => {
       this.departement = departement
     }
 
-    let gensPremier = new Gens('Louis', '27', '75')
+    const gensPremier = new Gens('Louis', '27', '75')
 
 
     console.log(gensPremier.name)
@@ -40,7 +40,7 @@ describe("Parcourir un tableau composé d'objets", () => {
   })
 
 
-//Héritage et chaîne de prototypes
+// Héritage et chaîne de prototypes
 
   test("30.2 Chaine de prototypes et héritage des propriétés ", () => {
 
@@ -49,11 +49,11 @@ describe("Parcourir un tableau composé d'objets", () => {
      */
 
 
-    let f = function () {
+    const f = function () {
       this.a = 1
       this.b = 2
     }
-    let o = new f();
+    const o = new f();
 
     f.prototype.b = 3;
     f.prototype.c = 4
@@ -68,16 +68,16 @@ describe("Parcourir un tableau composé d'objets", () => {
 
   test('...', () => {
 
-    let x = {a: 10, m: 5}
-    let y = Object.create(x)  //la méthode object.create() fait hériter à'lobjet z
-    y.a = 40                 //les propriétés de l'objet prototype y
+    const x = {a: 10, m: 5}
+    const y = Object.create(x)  // la méthode object.create() fait hériter à'lobjet z
+    y.a = 40                 // les propriétés de l'objet prototype y
 
-    let z = Object.create(y)
+    const z = Object.create(y)
 
    // expect(z.a).toEqual(40)
 
-    delete y.a                     //En utilisant l'opérateur delete, je supprime
-    expect(y.a).toEqual(10) //la valeur de y.a mais récupère la valeur hérité
+    delete y.a                     // En utilisant l'opérateur delete, je supprime
+    expect(y.a).toEqual(10) // la valeur de y.a mais récupère la valeur hérité
                                     // de x.a
 
   })
@@ -86,7 +86,7 @@ describe("Parcourir un tableau composé d'objets", () => {
 // Instance Properties
 
 
-//Function.prototype.arguments
+// Function.prototype.arguments
 
 test('arguments', () => {
 
@@ -107,16 +107,16 @@ test('arguments', () => {
 })
 
 
-//Function.prototype.caller
-//Function.prototype.displayName
-//Function.prototype.length
-//Function.prototype.name
+// Function.prototype.caller
+// Function.prototype.displayName
+// Function.prototype.length
+// Function.prototype.name
 
-//Instance Methods
-//Function.prototype.apply(thisArg [, argsArray])
-//Function.prototype.bind(thisArg[, arg1[, arg2[, ...argN]]])
-//Function.prototype.call(thisArg[, arg1, arg2, ...argN])
-//Function.prototype.toString()
+// Instance Methods
+// Function.prototype.apply(thisArg [, argsArray])
+// Function.prototype.bind(thisArg[, arg1[, arg2[, ...argN]]])
+// Function.prototype.call(thisArg[, arg1, arg2, ...argN])
+// Function.prototype.toString()
 //
 
 

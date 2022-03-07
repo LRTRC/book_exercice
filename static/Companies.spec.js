@@ -1017,17 +1017,15 @@ describe("Parcourir un tableau d'objets", () => {
      *  reformaté selon le souhait du client, grâce à une fonction.
      */
 
-    let
-      filtreHealth = database().filter(e => e.industry === 'Health').map(e => {
-          return {
+    const
+      filtreHealth = database().filter(e => e.industry === 'Health').map(e => ({
             company: e.company,
             rank: e.rank,
             industry: e.industry,
             city: e.city,
             website: e.website,
             raw_revenue: e.raw_revenue
-          }
-        }
+          })
       )
 
     expect(filtreHealth).toEqual([
@@ -1073,7 +1071,7 @@ describe("Parcourir un tableau d'objets", () => {
      * grâce à une fonction.
      */
 
-    let allCompanies = database().map(e => e.company)
+    const allCompanies = database().map(e => e.company)
 
     expect(allCompanies).toEqual(expect.arrayContaining([expect.any(String)])) // la valeur est une String
     expect(allCompanies).toEqual([
@@ -1108,7 +1106,7 @@ describe("Parcourir un tableau d'objets", () => {
      * grâce à une fonction.
      */
 
-    let allCities = database().map(e => e.city)
+    const allCities = database().map(e => e.city)
 
     expect(allCities).toEqual(expect.arrayContaining([expect.any(String)]))
     expect(allCities).toEqual([
@@ -1128,10 +1126,10 @@ describe("Parcourir un tableau d'objets", () => {
 
 
   test('26. Lister les dates de fondation', () => {
-    /**Recréer une table avec uniquement les valeurs de la clé founded, grâce à une fonction.
+    /** Recréer une table avec uniquement les valeurs de la clé founded, grâce à une fonction.
      */
 
-    let allFoundedDate = database().map(e => e.founded)
+    const allFoundedDate = database().map(e => e.founded)
 
     expect(allFoundedDate).toEqual(expect.arrayContaining([expect.any(Number)]))
     expect(allFoundedDate).toEqual([
@@ -1150,7 +1148,7 @@ describe("Parcourir un tableau d'objets", () => {
      * grâce à une fonction.
      */
 
-    let allRawRevenu = database().map(e => e.raw_revenue.toLocaleString('us', {
+    const allRawRevenu = database().map(e => e.raw_revenue.toLocaleString('us', {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 2
@@ -1174,16 +1172,14 @@ describe("Parcourir un tableau d'objets", () => {
 
 
   test('28. lister et ordonner les entreprises par rang', () => {
-    /**Recréer une table avec les clés - valeurs company et rank, grâce à une fonction, puis
+    /** Recréer une table avec les clés - valeurs company et rank, grâce à une fonction, puis
      * inverser l'ordre de la table.
      */
 
-    let sortCompanies = database().map(e => {
-        return {
+    const sortCompanies = database().map(e => ({
           company: e.company,
           rank: e.rank,
-        }
-      }
+        })
     )
     sortCompanies.reverse()
 
@@ -1222,7 +1218,7 @@ describe("Parcourir un tableau d'objets", () => {
     /** Filtrer la table par les clés Health et Software puis mapper avec key company.
      */
 
-    let filtreIndustry = database().filter(e => e.industry === 'Health' || e.industry === 'Software').map(e => e.company)
+    const filtreIndustry = database().filter(e => e.industry === 'Health' || e.industry === 'Software').map(e => e.company)
 
     console.log(filtreIndustry)
 

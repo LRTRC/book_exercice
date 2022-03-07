@@ -1,6 +1,8 @@
 <template>
   <div>
-        <v-card class="mx-auto">
+        <v-card
+          width="100%"
+        >
           <v-subheader class="blue text-h5 white--text">LIST</v-subheader>
           <v-list-item two-line>
             <v-list-item-content>

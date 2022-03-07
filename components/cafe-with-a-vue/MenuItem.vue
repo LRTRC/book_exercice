@@ -74,9 +74,9 @@ export default {
     generatedPrice() {
       if (this.onSale) {
         return (this.price * 0.9).toFixed(2)
-      } else {
+      } 
         return this.price
-      }
+      
     }
   },
   methods: {

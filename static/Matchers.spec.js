@@ -4,10 +4,10 @@ describe('Utiliser le Matchers adéquat dans ' +
   test('18.1 Variables de types différents ou similaires', () => {
 // Vérifier le produit de 5 ainsi que les types primitifs des valeurs
 
-    let intA = 5
-    let intB = '5'
-    let intC = 25
-    let stringA = '25'
+    const intA = 5
+    const intB = '5'
+    const intC = 25
+    const stringA = '25'
 
     expect(intA).not.toBe(intB) // instances distinctes
     expect(intA * intB).toStrictEqual(intC) // number*string = number
@@ -22,11 +22,11 @@ describe('Utiliser le Matchers adéquat dans ' +
   test('18.2 push an array', () => {
 // Ajouter une clé-valeur à un objet
 
-    let objetUn = {
+    const objetUn = {
       a: 5,
       b: 3
     }
-    objetUn['c'] = 7
+    objetUn.c = 7
 
     expect(objetUn).toEqual({a: 5, b: 3, c: 7})
     expect(typeof objetUn).toBe('object')
@@ -38,8 +38,8 @@ describe('Utiliser le Matchers adéquat dans ' +
   test('18.3 modulo result 1', () => {
 // Vérifier le reste d'un quotien avec modulo % ainsi que les types primitifs
     // des variables
-    let a = 5
-    let b = 2
+    const a = 5
+    const b = 2
 
     expect(a % b).toEqual(1)
     expect(typeof a).toBe('number')
@@ -49,7 +49,7 @@ describe('Utiliser le Matchers adéquat dans ' +
 
   test("18.4 longueur de l'array 10", () => {
 // Vérifier la longueur d'un tableau ainsi que le type primitif de la variable
-    let colors = ['jaune', 'bleu', 'vert', 'rouge', 'orange', 'violet', 'noir',
+    const colors = ['jaune', 'bleu', 'vert', 'rouge', 'orange', 'violet', 'noir',
       'blanc', 'marron', 'turquoise']
 
     expect(colors.length).toBe(10)
@@ -62,8 +62,8 @@ describe('Utiliser le Matchers adéquat dans ' +
 // Vérifier l'égalité de deux tableaux d'objets sans le matcher .toStrictEqual
     // ainsi que le type primitif
 
-    let tableOne = [{a: 5, b: 3,}, {a: 5, b: 3}, {a: 5, b: 3}]
-    let tableTwo = [{a: 5, b: 3,}, {a: 5, b: 3}, {a: 5, b: 3}]
+    const tableOne = [{a: 5, b: 3,}, {a: 5, b: 3}, {a: 5, b: 3}]
+    const tableTwo = [{a: 5, b: 3,}, {a: 5, b: 3}, {a: 5, b: 3}]
 
     expect(tableOne).toMatchObject(tableTwo)
     expect(tableOne).toEqual(expect.arrayContaining(tableTwo))
@@ -74,9 +74,9 @@ describe('Utiliser le Matchers adéquat dans ' +
   test('18.6 Division', () => {
 // Vérifier la strict égalité de c = a / b ainsi que son type primitif
 
-    let a = 2
-    let b = 5
-    let c = a / b
+    const a = 2
+    const b = 5
+    const c = a / b
 
     expect(c).toStrictEqual(0.4)
     expect(c).toEqual(expect.any(Number))
@@ -86,10 +86,10 @@ describe('Utiliser le Matchers adéquat dans ' +
   test('18.7 Sum', () => {
 // Vérifier la strict égalité de d = a + b + c ainsi que son type primitif
 
-    let a = 0.25
-    let b = 0.5
-    let c = 1
-    let d = a + b + c
+    const a = 0.25
+    const b = 0.5
+    const c = 1
+    const d = a + b + c
     expect(d).toStrictEqual(1.75)
     expect(d).toEqual(expect.any(Number))
   })
@@ -98,8 +98,8 @@ describe('Utiliser le Matchers adéquat dans ' +
   test('18.8 Matching', () => {
 // Vérifier que deux objet soit similaire
 
-    let a = ['bc4baf4a-79c8-11ec-90d6-0242ac120003']
-    let b = ['bc4baf4a-79c8-11ec90d6-0242ac120003']
+    const a = ['bc4baf4a-79c8-11ec-90d6-0242ac120003']
+    const b = ['bc4baf4a-79c8-11ec90d6-0242ac120003']
 
 
     expect(a).not.toStrictEqual(b)
@@ -111,8 +111,8 @@ describe('Utiliser le Matchers adéquat dans ' +
 
   test('19.1 greater or lesser', () => {
 // Vérifier que "a" est supérieur à "b" et que c'est une valeur numérique
-    let a = 1
-    let b = 2
+    const a = 1
+    const b = 2
 
     expect(b).toBeGreaterThan(a)
     expect(b).not.toBeLessThanOrEqual(a)
@@ -123,8 +123,8 @@ describe('Utiliser le Matchers adéquat dans ' +
 
   test('19.2 lesser or equal', () => {
 // vérifier que a n'est pas supérieur ou égale à b et que c'est une valeur numérique
-    let a = 6
-    let b = 5
+    const a = 6
+    const b = 5
 
     expect(b).not.toBeGreaterThan(a)
     expect(b).toBeLessThanOrEqual(a)
@@ -136,7 +136,7 @@ describe('Utiliser le Matchers adéquat dans ' +
   test('19.3 longueur array bis', () => {
 // Vérifier que la longueur du tableau "a" est supérieur à 2
 // et que "a" est de type Array
-    let a = [0, 1, 2, 3, 4, 5]
+    const a = [0, 1, 2, 3, 4, 5]
 
     expect(a.length).toBeGreaterThan(2)
     expect(a).toEqual(expect.any(Array))
@@ -147,9 +147,9 @@ describe('Utiliser le Matchers adéquat dans ' +
   test('19.4 divider lesser than', () => {
 // vérifier que le quotient de 2/5 est supérieur à 1,
 // que a n'est pas égale à b et que le quotient est bien une valeur numérique
-    let a = 2
-    let b = 5
-    let c = a / b
+    const a = 2
+    const b = 5
+    const c = a / b
 
     expect(a).toBeGreaterThan(1)
     expect(a).not.toEqual(c)
@@ -163,7 +163,7 @@ describe('Utiliser le Matchers adéquat dans ' +
      * vérifier si les éléments demandés sont présents.
      * */
 
-//déclarer les listes en constantes.
+// déclarer les listes en constantes.
 
     const shoppingList = ['diapers', 'kleenex', 'trash bags', 'paper towels', 'milk',]
     const fruits = ['banana', 'pommes', 'ananas', 'paper towels', 'tomate', 'cassis']

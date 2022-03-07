@@ -113,7 +113,7 @@ export default {
 
           this.countkeya++
           this.incrementslider()
-          let restart_bool = this.restart(this.slider.val)
+          const restart_bool = this.restart(this.slider.val)
           this.dialog = restart_bool
           this.slider.disabled = restart_bool
         }
@@ -121,7 +121,7 @@ export default {
           console.log('click p')
           this.countkeyp++
           this.decrementslider()
-          let restart_bool = this.restart(this.slider.val)
+          const restart_bool = this.restart(this.slider.val)
           this.dialog = restart_bool
           this.slider.disabled = restart_bool
         }
@@ -133,10 +133,10 @@ export default {
     });
   },
   methods: {
-    changeComponent: function () {
+    changeComponent () {
       this.$emit('changeComponent', 'SliderPro')
     },
-    incrementslider: function () {
+    incrementslider () {
       if (this.countkeya >= 100) {
         this.slider.val += 40
         this.bonusa = this.displaybonus(this.countkeya)
@@ -151,7 +151,7 @@ export default {
         this.bonusa = this.displaybonus(this.countkeya)
       }
     },
-    decrementslider: function () {
+    decrementslider () {
       console.log('errer')
       if (this.countkeyp >= 100) {
         this.slider.val -= 40
@@ -166,21 +166,21 @@ export default {
         this.slider.val -= 5
       this.bonusp = this.displaybonus(this.countkeyp)
     },
-    displaybonus: function (countkey) {
+    displaybonus (countkey) {
       if (countkey >= 100)
         return 35
-      else if (countkey > 74 && countkey < 100)
+      if (countkey > 74 && countkey < 100)
         return 10
-      else if (countkey > 49 && countkey < 75)
+      if (countkey > 49 && countkey < 75)
         return 5
-      else return 0;
+      return 0;
     },
-    restart: function (val) {
+    restart (val) {
 
       return (val >= 100) || (val <= 0);
     },
 
-    reboot: function () {
+    reboot () {
       this.countkeyp = 0
       this.countkeya = 0
       this.bonusa = 0

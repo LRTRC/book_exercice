@@ -5,6 +5,8 @@
           header-color="green"
           color="green"
           locale="fr"
+          class="flex-wrap"
+          width="100%"
 
         />
   </div>

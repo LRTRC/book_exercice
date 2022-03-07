@@ -218,9 +218,6 @@ export default {
       ],
     }
   },
-  mounted() {
-    console.log(this)
-  },
   methods: {
     validate() {
       this.$refs.form.validate()

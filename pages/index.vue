@@ -5,7 +5,7 @@
     </keep-alive>
 
     <div
-    v-if="component === 'SliderPro'"
+      v-if="component === 'SliderPro'"
     >
       <v-card
         class="pa-5 ma-3"
@@ -46,16 +46,20 @@
             <sparklines/>
           </v-card>
         </v-col>
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="4" class="fil">
           <v-card
-            class="pa-5 ma-3 "
+            class="pa-5 ma-3 flex-wrap"
             color="#2A3942"
             shaped
+            height="100%"
           >
-
             <right-list class="ma-5"/>
             <Button class="ma-5 "/>
-            <calendly class="my-5"/>
+            <div
+              class="text-center"
+            >
+              <calendly class="my-5 "/>
+            </div>
           </v-card>
         </v-col>
       </v-row>
@@ -94,7 +98,7 @@ export default {
     component: 'SliderPro',
   }),
   methods: {
-    updateComponent: function (updatedComponent) {
+    updateComponent (updatedComponent) {
       return this.component = updatedComponent
     }
   }

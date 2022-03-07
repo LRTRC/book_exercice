@@ -11,7 +11,7 @@ describe('Fibonacci', () => {
      */
 
     let x = 0
-    let n = []
+    const n = []
 
     const Fibonacci = () => {
       if (x === 0) {  // On démarre la suite en implémentant 0 à la table
@@ -40,7 +40,7 @@ describe('Fibonacci', () => {
      */
 
     let x = 0
-    let n = []
+    const n = []
 
     const Fibonacci = () => {
       if (x === 0) {
@@ -57,7 +57,7 @@ describe('Fibonacci', () => {
         x = n[n.length - 1] + n[n.length - 2]
         n.push(x)
       }
-      let index = n.findIndex(e => e === 433494437) //On crée une variable et
+      const index = n.findIndex(e => e === 433494437) // On crée une variable et
       return index                          // grâce à la fonction de callback
     }                                      // .findIndex, on retrouver l'index
                                           // de la valeur "433494437"

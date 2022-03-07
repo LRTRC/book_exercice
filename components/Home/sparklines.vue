@@ -80,7 +80,7 @@
 
 <script>
 
-let gradients = [
+const gradients = [
   ['#e0e0e0'],
   ['#42b3f4'],
   ['red', 'orange', 'yellow'],
@@ -88,13 +88,13 @@ let gradients = [
   ['#00c6ff', '#F0F', '#ffff00'],
   ['#f72047', '#ffd200', '#1feaea'],
 ]
-let gradients2 = [
+const gradients2 = [
   ['#4b6928'],
   ['#5ffc53'],
   ['#fcbc2e'],
 ]
 
-let gradients3 = [
+const gradients3 = [
   ['#f1ec0a'],
   ['#e74f04'],
   ['#ff0000'],
